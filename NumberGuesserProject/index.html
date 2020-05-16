@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css" integrity="sha256-TNITsO43wu6JQM0Dom4hL/XAfROa86riLMhKuXJoCT0=" crossorigin="anonymous" />
+    <title>Number Guesser</title>
+    <style>
+        .right {
+            text-align: right;
+            text-decoration: underline;
+            text-shadow: 0.5px 0.5px rgb(185, 157, 152);
+            font-size: 18px;
+        }
+        
+        .loader {
+            border: 16px solid #c2eeffd0;
+            /* Light grey */
+            border-top: 16px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container center">
+        <h1>Number Guesser</h1>
+        <div id="game">
+            <h3>Level <span id="level-number">1</span></h3>
+            <p>Guess a number between <span class="min-num"></span> and <span class="max-num"></span> </p>
+            <input type="number" id="guess-input" placeholder="Enter your guess....">
+            <input type="submit" value="submit" id="guess-btn">
+            <p class="message"></p>
+            <p class="right"><b> Guesses Left : <span class="guessLeft"></span></b></p>
+        </div>
+        <div class="loader" id="loader"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
